@@ -5,10 +5,13 @@ const path = require('node:path')
 function createWindow () {
   const win = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 600,
+    show:false
   })
-
+  
   win.loadFile('index.html')
+  win.once("ready-to-show",win.show)
+  // win.webContents.openDevTools() //show clg default
 }
  
 const fileName = 'recently-used.md'
