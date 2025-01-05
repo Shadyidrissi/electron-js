@@ -19,6 +19,7 @@
     "define-data-property": "^1.1.4",
     "define-properties": "^1.2.1",
     "detect-node": "^2.1.0",
+    "electron-window-state": "^5.0.3",
     "end-of-stream": "^1.4.4",
     "env-paths": "^2.2.1",
     "es-define-property": "^1.0.0",
@@ -72,7 +73,7 @@
     "wrappy": "^1.0.2",
     "yauzl": "^2.10.0"
   },
-    "scripts": {
+  "scripts": {
     "start": "electron ."
   },
   "author": "",
