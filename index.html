@@ -3,13 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Recent Documents</title>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <!-- Improved Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+    <style>
+        /* Add styling for the Electron app */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        h1, p {
+            user-select: none; /* Prevent text selection */
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Draggable region for Electron */
+        .draggable {
+            -webkit-app-region: drag;
+        }
+    </style>
 </head>
 <body>
-    <h1>shady hello</h1>
+    <h1 class="draggable">Shady Hello</h1>
     <p>
-        Right click on the app icon to see recent documents.
-        You should see `recently-used.md` added to the list of recent files
+        Right-click on the app icon to see recent documents.
+        You should see <code>recently-used.md</code> added to the list of recent files.
     </p>
 </body>
 </html>

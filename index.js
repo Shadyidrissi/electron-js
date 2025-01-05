@@ -11,13 +11,18 @@ function createWindow () {
   
   win.loadFile('index.html')
   win.once("ready-to-show",win.show)
-  // win.webContents.openDevTools() //show clg default
+  
+
+  // garbage 
+  win.on("closed",()=>{
+    win=null
+  })
 }
  
-const fileName = 'recently-used.md'
-fs.writeFile(fileName, 'Lorem Ipsum', () => {
-  app.addRecentDocument(path.join(__dirname, fileName))
-})
+// const fileName = 'recently-used.md'
+// fs.writeFile(fileName, 'Lorem Ipsum', () => {
+//   app.addRecentDocument(path.join(__dirname, fileName))
+// })
 
 app.whenReady().then(createWindow)
 
