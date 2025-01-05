@@ -2,8 +2,10 @@ const { app, BrowserWindow } = require('electron/main')
 const fs = require('node:fs')
 const path = require('node:path')
 const windowsState= require('electron-window-state')
+const {MainMenu} = require('./MainMenu')
 
 function createWindow () {
+  new MainMenu()
   let winstate=windowsState({
     defaultWidth:800,
     defaultHeight:600,
